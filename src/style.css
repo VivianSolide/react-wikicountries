@@ -1,0 +1,21 @@
+.country {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	border: 1px solid #cdcdcd;
+	border-radius: 8px;
+}
+
+.nav {
+	background-color: blue;
+	color: white;
+}
+
+td {
+	padding-left: 20px;
+}
+
+li {
+	list-style: none;
+}
