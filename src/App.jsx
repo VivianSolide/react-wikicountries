@@ -30,7 +30,7 @@ class App extends Component {
 			filteredCountries = results.map((c, i) => {
 				return (
 					<CountryList
-						index={i}
+						index={c.cca3}
 						key={i}
 						country={c.name.official}
 						flag={c.flag}
@@ -42,7 +42,7 @@ class App extends Component {
 			filteredCountries = this.state.data.map((c, i) => {
 				return (
 					<CountryList
-						index={i}
+						index={c.cca3}
 						key={i}
 						country={c.name.official}
 						flag={c.flag}
@@ -94,8 +94,14 @@ class App extends Component {
 	}
 
 	_select = index => {
-		this.setState({
-			selectedCountry: data[index]
+		console.log(index);
+		let selectedCountry = "";
+		selectedCountry = this.state.data.map(c => {
+			if (c.cca3 === index) {
+				this.setState({
+					selectedCountry: c
+				});
+			}
 		});
 	};
 
